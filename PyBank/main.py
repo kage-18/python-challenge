@@ -9,7 +9,7 @@ with open(file_path, 'r') as open_file:
     csv_reader = csv.reader(open_file, delimiter=",")
     next(csv_reader, None)
     first_row = next(csv_reader, None)
-    months = 0
+    months = 1
     previous_val = int(first_row[1])
     net_total = 0 + previous_val
     max_increase = [first_row[0], previous_val]
