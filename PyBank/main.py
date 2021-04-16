@@ -34,5 +34,3 @@ Average Change: ${round(mean(changes), 2)}
 Greatest Increase in Profits: {max_increase[0]} (${max_increase[1]})
 Greatest Decrease in Profits: {max_decrease[0]} (${max_decrease[1]})
 ''')
-        
-print(changes)
