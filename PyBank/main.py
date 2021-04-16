@@ -21,9 +21,9 @@ with open(file_path, 'r') as open_file:
         previous_val = int(row[1])
         net_total += int(row[1])
         if int(row[1]) >= max_increase[1]:
-            max_increase = [row[0],int(row[1])]
+            max_increase = [row[0],changes[-1]]
         if int(row[1]) <= max_decrease[1]:
-            max_decrease = [row[0],int(row[1])]
+            max_decrease = [row[0],changes[-1]]
 
 print(f'''
 Financial Analysis
