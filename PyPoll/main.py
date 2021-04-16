@@ -37,3 +37,19 @@ Winner: {next(iter(winner))[0]}
 --------------------------------
 ''')
 
+output_file_path = os.path.join("Analysis", "analysis.txt")
+with open(output_file_path, 'w') as output_file:
+    output_file.write(f'''
+                        Election Results
+                        --------------------------------
+                        Total Votes: {total_votes}
+                        --------------------------------
+                        {candidate_keys[0]}: {round(int(candidates[candidate_keys[0]]) / total_votes, 2)*100}% ({int(candidates[candidate_keys[0]])})
+                        {candidate_keys[1]}: {round(int(candidates[candidate_keys[1]]) / total_votes, 2)*100}% ({int(candidates[candidate_keys[1]])})
+                        {candidate_keys[2]}: {round(int(candidates[candidate_keys[2]]) / total_votes, 2)*100}% ({int(candidates[candidate_keys[2]])})
+                        {candidate_keys[3]}: {round(int(candidates[candidate_keys[3]]) / total_votes, 2)*100}% ({int(candidates[candidate_keys[3]])})
+                        --------------------------------
+                        Winner: {next(iter(winner))[0]}
+                        --------------------------------
+                        ''')
+
