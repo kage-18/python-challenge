@@ -17,6 +17,7 @@ with open(file_path, 'r') as csv_file:
             candidates[row[2]] = 1
 
 winner = ""
+print(candidates)
 
 print(f'''
 Election Results
