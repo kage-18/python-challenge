@@ -1,2 +1,2 @@
 # python-challenge
-Repository for Python homework
+Repository for Python homework for USC Data Analytics Bootcamp
