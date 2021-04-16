@@ -34,4 +34,19 @@ Average Change: ${round(mean(changes), 2)}
 Greatest Increase in Profits: {max_increase[0]} (${max_increase[1]})
 Greatest Decrease in Profits: {max_decrease[0]} (${max_decrease[1]})
 ''')
-
+input_data = {"Total Months": months, 
+                "Total": net_total, 
+                "Average Change": round(mean(changes), 2), 
+                "Greatest Increase in Profits": [max_increase[0], max_increase[1]], 
+                "Greatest Decrease in Profits": [max_decrease[0], max_decrease[1]]}
+output_file_path = os.path.join("analysis", "analysis.txt")
+with open(output_file_path, 'w') as output_file:
+    output_file.write(f'''
+                        Financial Analysis
+                        ---------------------------
+                        Total Months:{months}
+                        Total: ${net_total}
+                        Average Change: ${round(mean(changes), 2)}
+                        Greatest Increase in Profits: {max_increase[0]} (${max_increase[1]})
+                        Greatest Decrease in Profits: {max_decrease[0]} (${max_decrease[1]})
+                        ''')
