@@ -16,13 +16,16 @@ with open(file_path, 'r') as csv_file:
         else:
             candidates[row[2]] = 1
 
-winner = ""
-print(candidates)
+winner = sorted(candidates.items(), key=lambda x: x[1], reverse = True)
 
 print(f'''
 Election Results
 --------------------------------
 Total Votes: {total_votes}
+--------------------------------
+{candidates}
+--------------------------------
+Winner: {next(iter(winner))[0]}
 --------------------------------
 ''')
 
